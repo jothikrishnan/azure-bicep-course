@@ -8,6 +8,7 @@ variables:
   location: 'eastus'
   webAppName: 'bicep0017'
   templateFile: '01-bicep-webapp/webapp-linux.bicep'
+  id: '5b48a54d-2088-47f1-ac5e-2f2fd142bc89'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -17,7 +18,7 @@ steps:
 - task: AzureCLI@2
   displayName: Preview Bicep Changes
   inputs:
-    azureSubscription: '(5b48a54d-2088-47f1-ac5e-2f2fd142bc89)'
+    azureSubscription: $(id)
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -30,7 +31,7 @@ steps:
 - task: AzureCLI@2
   displayName: Deploy Bicep To Azure
   inputs:
-    azureSubscription: '(5b48a54d-2088-47f1-ac5e-2f2fd142bc89)'
+    azureSubscription: $(id)
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
