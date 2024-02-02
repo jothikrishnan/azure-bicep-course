@@ -8,7 +8,7 @@ variables:
   location: 'eastus'
   webAppName: 'bicep0017'
   templateFile: '01-bicep-webapp/webapp-linux.bicep'
-  id: '5b48a54d-2088-47f1-ac5e-2f2fd142bc89'
+  id: 'Azure_Connection'
 
 pool:
   vmImage: 'ubuntu-latest'
