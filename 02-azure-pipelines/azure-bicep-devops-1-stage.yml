@@ -18,7 +18,7 @@ steps:
 - task: AzureCLI@2
   displayName: Preview Bicep Changes
   inputs:
-    azureSubscription: $(id)
+    azureSubscription: 'Azure_Connection'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
